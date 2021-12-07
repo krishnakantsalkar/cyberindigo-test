@@ -1,0 +1,66 @@
+<div class="dashboard_main container-fluid">
+  <div class="dashboard_title_row">
+    <div class="dashboard_text">Dashboard</div>
+    <div class="date_content">
+      <div class="date">{{ date | date: "d MMM YYYY, EEEE" }}</div>
+
+      <mat-icon>search</mat-icon>
+    </div>
+  </div>
+
+  <div class="welcome_card">
+    <div class="welcome_text">
+      <div class="text_lg">Welcome back Anna!</div>
+      <p class="text_sm">
+        You've learned <b> 80%</b> of your goal this week! <br />
+        Keep it up and improve your result!
+      </p>
+    </div>
+    <div class="welcome_img"><img src="assets/welcome_img.png" /></div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-5">
+      <div class="latest_results"></div>
+    </div>
+    <div class="col-lg-7">
+      <div class="time_spent"></div>
+    </div>
+  </div>
+
+  <div class="your_courses_row">
+    <div class="courses_text">Your courses</div>
+    <div class="side_content">
+      <div class="more_text">More</div>
+      <mat-icon>trending_flat</mat-icon>
+    </div>
+  </div>
+
+  <div class="courses">
+    <div class="course_one">
+      <div class="course_icon_one">B2</div>
+      <div class="course_content_one">
+        <h5>Business English</h5>
+        <h4>Grammar</h4>
+      </div>
+      <mat-icon>trending_flat</mat-icon>
+    </div>
+    <div class="course_two">
+      <div class="course_icon_two">B2</div>
+      <div class="course_content_two">
+        <h5>Common English</h5>
+
+        <h4>Phrasal verbs</h4>
+      </div>
+      <mat-icon>trending_flat</mat-icon>
+    </div>
+    <div class="course_three">
+      <div class="course_icon_three">C1</div>
+      <div class="course_content_three">
+        <h5>Business Spanish</h5>
+        <h4>Vocabulary</h4>
+      </div>
+      <mat-icon>trending_flat</mat-icon>
+    </div>
+  </div>
+</div>

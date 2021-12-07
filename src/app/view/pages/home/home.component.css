@@ -1,0 +1,228 @@
+.app_logo {
+  position: absolute;
+  top: 40px;
+  left: 70px;
+  z-index: 10;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.app_logo mat-icon {
+  position: relative;
+  top: 7px;
+}
+
+.sidenav_main {
+  min-height: 100vh;
+  background-color: #fefefe;
+  color: black;
+  width: 250px;
+}
+.sidenav_content {
+  min-height: 100vh;
+  background-color: #f5f5fb;
+  color: black;
+}
+
+.navigation {
+  margin-top: 150px;
+  /* position: relative; */
+  height: calc(100vh - 150px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navigation a {
+  margin: 20px auto;
+  padding-left: 30px;
+  text-decoration: none;
+  color: #a5a5c4;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.navigation a mat-icon {
+  margin-right: 10px;
+}
+
+.navigation a:hover {
+  background-color: #e5e9f9;
+  color: black;
+}
+
+.activeCss {
+  border-right: 4px solid blue;
+  border-radius: 0 !important;
+}
+
+.router-outlet,
+.right_panel {
+  padding-top: 40px;
+}
+
+.right_panel {
+  background-color: white;
+  min-height: calc(100vh - 30px);
+}
+
+.upgrade {
+  text-align: center;
+  margin-bottom: 130px;
+}
+
+.upgrade img {
+  height: 100px;
+}
+
+.upgrade p {
+  margin-top: 20px;
+  text-align: center;
+  color: #a5a5c4;
+}
+
+.upgrade p span {
+  font-weight: 600;
+  color: black;
+}
+
+.upgrade_btn {
+  margin-top: 20px;
+  background-color: #5e81f4;
+  color: white;
+  border-radius: 14px;
+  padding: 8px 24px;
+}
+
+.logout_row,
+.reminders_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logout_text,
+.reminders_text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.profile_info {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile_img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid #f0f0f5;
+  position: relative;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/5/53/Blank_woman_placeholder.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.profile_img mat-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+  padding: 20px;
+  border-radius: 50%;
+  font-weight: 700;
+  color: white;
+  background-color: #5e81f4;
+}
+
+.profile_info h4 {
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.profile_info h5 {
+  margin-top: 10px;
+  color: #babadf;
+  font-size: 15px;
+}
+
+.course_info {
+  margin-top: 40px;
+}
+
+.course_one,
+.course_two {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.course_icon_one,
+.course_icon_two {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  background-color: #f5f5f7;
+}
+
+.course_info .progress {
+  height: 8px;
+  width: 30%;
+}
+
+.course_one h4,
+.course_two h4,
+.reminder_content h4 {
+  font-weight: 500;
+  font-size: 16px;
+}
+.course_one h5,
+.course_two h5,
+.reminder_content h5 {
+  color: #babadf;
+  font-size: 14px;
+}
+
+.reminders_row {
+  margin-top: 40px;
+}
+.reminder_area {
+  margin-top: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.reminder_data {
+  display: flex;
+  align-items: center;
+}
+
+.reminder_content {
+  margin: 5px 0;
+}
+.reminder_icon {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 25px;
+  border-radius: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  background-color: #f5f5f7;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

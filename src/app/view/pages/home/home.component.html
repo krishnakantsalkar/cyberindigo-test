@@ -1,0 +1,147 @@
+<div
+  class="app_logo"
+  (click)="sidenav()"
+  [ngStyle]="{ top: sidenavOpen ? '40px' : '10px' }"
+>
+  <mat-icon>code</mat-icon> Logo
+</div>
+<mat-sidenav-container
+  ><mat-sidenav class="sidenav_main" mode="side" [opened]="sidenavOpen">
+    <div class="navigation">
+      <div class="nav_links">
+        <a [routerLink]="['dashboard']" routerLinkActive="activeCss">
+          <mat-icon class="material-icons-outlined">space_dashboard</mat-icon>
+          Dashboard</a
+        >
+        <a [routerLink]="['classes']" routerLinkActive="activeCss">
+          <mat-icon class="material-icons-outlined">folder</mat-icon> Classes</a
+        >
+        <a [routerLink]="['resources']" routerLinkActive="activeCss">
+          <mat-icon class="material-icons-outlined">class</mat-icon>
+          Resources</a
+        >
+        <a [routerLink]="['learning-plan']" routerLinkActive="activeCss">
+          <mat-icon class="material-icons-outlined">calendar_today</mat-icon>
+          Learning Plan</a
+        >
+        <a [routerLink]="['chat']" routerLinkActive="activeCss">
+          <mat-icon
+            class="material-icons-outlined"
+            matBadge="4"
+            matBadgePosition="above after"
+            >chat_bubble_outline</mat-icon
+          >
+          Chat</a
+        >
+        <a [routerLink]="['settings']" routerLinkActive="activeCss">
+          <mat-icon class="material-icons-outlined">settings</mat-icon>
+          Settings</a
+        >
+      </div>
+      <div class="upgrade">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/2/22/Twemoji12_1f4c2.svg"
+          alt=""
+        />
+        <p>
+          Upgrade to <span> PRO</span> for <br />
+          more resources.
+        </p>
+
+        <button mat-raised-button class="upgrade_btn">Upgrade</button>
+      </div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav_content">
+    <div class="row w-100">
+      <div class="col-lg-9">
+        <div class="container-fluid router-outlet">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+      <div class="col-lg-3 right_panel">
+        <div class="container-fluid">
+          <div class="logout_row">
+            <div class="logout_text">Logout</div>
+
+            <mat-icon>logout</mat-icon>
+          </div>
+
+          <div class="profile_info">
+            <div class="profile_img">
+              <mat-icon>add</mat-icon>
+            </div>
+
+            <h4>Anna Morrison</h4>
+            <h5>Student</h5>
+          </div>
+
+          <div class="course_info">
+            <div class="course_one">
+              <div class="course_icon_one">B2</div>
+              <div class="course_content_one">
+                <h4>Business English</h4>
+                <h5>Grammar</h5>
+              </div>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="60"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 60%"
+                ></div>
+              </div>
+            </div>
+            <div class="course_two">
+              <div class="course_icon_two">C1</div>
+              <div class="course_content_two">
+                <h4>Common English</h4>
+
+                <h5>Phrasal verbs</h5>
+              </div>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="90"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 90%"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reminders_row">
+            <div class="reminders_text">Reminders</div>
+
+            <mat-icon class="material-icons-outlined">notifications</mat-icon>
+          </div>
+
+          <div class="reminder_area">
+            <div
+              class="reminder_data"
+              *ngFor="let data of reminders; let i = index"
+            >
+              <mat-icon
+                class="material-icons-outlined reminder_icon"
+                [ngStyle]="{
+                  'background-color':
+                    data.icon == 'error' ? '#FEF2F3' : '#EEF2FD',
+                  color: data.icon == 'error' ? '#FE808A' : '#92AAF7'
+                }"
+                >{{ data.icon }}</mat-icon
+              >
+              <div class="reminder_content">
+                <h4>{{ data.content }}</h4>
+                <h5>{{ data.date }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content></mat-sidenav-container
+>
