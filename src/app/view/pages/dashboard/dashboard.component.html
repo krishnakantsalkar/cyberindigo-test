@@ -21,10 +21,122 @@
 
   <div class="row">
     <div class="col-lg-5">
-      <div class="latest_results"></div>
+      <div class="latest_results">
+        <div class="latest_results_row">
+          <div class="latest_results_text">Latest results</div>
+
+          <div class="latest_results_more">
+            More <mat-icon>trending_flat</mat-icon>
+          </div>
+        </div>
+        <div class="latest_results_data">
+          <div
+            class="latest_results_content row w-100"
+            *ngFor="let unit of unitsArr; let i = index"
+            #unitDiv=
+          >
+            <div class="col-lg-6">
+              <span class="unit_no">{{ unit.unitNo }} -</span>
+              <span class="unit_name"> {{ unit.unitName }}</span>
+            </div>
+            <div class="unit_progress_bar col-lg-5">
+              <div class="unit_progress" [ngStyle]="{ width: latestProgressHeight }">
+              <div class="progress" >
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  [ngStyle]="{
+                    width: unit.unitValue
+                  }"
+                  [ngClass]="[unit.color]"
+                ></div>
+              </div></div>
+            </div>
+            <div class="col-lg-1"><span style="background-color: transparent;font-weight: 500;" [ngClass]="[unit.color]">{{ unit.unitValue }}</span></div>
+
+            <hr class="col-lg-12 divider" *ngIf="i < unitsArr.length - 1" />
+
+          </div>
+
+        </div>
+      </div>
     </div>
     <div class="col-lg-7">
-      <div class="time_spent"></div>
+      <div class="time_spent">
+        <div class="time_spent_row">
+          <div class="time_spent_text">Time spent on learning</div>
+
+          <div class="last_week">
+            Last week <mat-icon>keyboard_arrow_down</mat-icon>
+          </div>
+        </div>
+        <div class="week" [ngStyle]="{ height: timeProgressHeight }">
+          <div class="days" *ngFor="let day of daysOfTheWeek">
+            <div class="day_title">{{ day.day }}</div>
+            <div class="progress progress-bar-vertical">
+              <div
+                class="progress-bar"
+                [ngClass]="[day.color_one]"
+                role="progressbar"
+                aria-valuenow="0"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                [ngStyle]="{
+                  height: day.value_one,
+                  transition: day.transition,
+                  opacity: day.opacity
+                }"
+              ></div>
+              <div
+                class="progress-bar"
+                [ngClass]="[day.color_two]"
+                role="progressbar"
+                aria-valuenow="20"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                [ngStyle]="{
+                  height: day.value_two,
+                  transition: day.transition,
+                  opacity: day.opacity
+                }"
+              ></div>
+              <div
+                class="progress-bar"
+                [ngClass]="[day.color_three]"
+                role="progressbar"
+                aria-valuenow="0"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                [ngStyle]="{
+                  height: day.value_three,
+                  transition: day.transition,
+                  opacity: day.opacity
+                }"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="progress_info">
+          <div class="progress_info_content">
+            <span class="info_color progress_color--two"></span>
+            <div>Vocabulary</div>
+          </div>
+          <div class="progress_info_content">
+            <span class="info_color progress_color--one"></span>
+            <div>Grammar</div>
+          </div>
+          <div class="progress_info_content">
+            <span class="info_color progress_color--three"></span>
+            <div>Listening</div>
+          </div>
+          <div class="progress_info_content">
+            <span class="info_color progress_color--four"></span>
+            <div>Writing</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

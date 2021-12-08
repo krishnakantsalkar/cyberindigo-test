@@ -1,9 +1,16 @@
 <div
   class="app_logo"
   (click)="sidenav()"
-  [ngStyle]="{ top: sidenavOpen ? '40px' : '10px' }"
+  [ngStyle]="{
+    top: sidenavOpen ? '40px' : '10px',
+    left: sidenavOpen ? '28px' : '40px'
+  }"
 >
-  <mat-icon>code</mat-icon> Logo
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg"
+    alt=""
+  />
+  Logo
 </div>
 <mat-sidenav-container
   ><mat-sidenav class="sidenav_main" mode="side" [opened]="sidenavOpen">
@@ -80,8 +87,8 @@
             <div class="course_one">
               <div class="course_icon_one">B2</div>
               <div class="course_content_one">
-                <h4>Business English</h4>
-                <h5>Grammar</h5>
+                <h4>English</h4>
+                <h5>High intermediate</h5>
               </div>
               <div class="progress">
                 <div
@@ -97,9 +104,9 @@
             <div class="course_two">
               <div class="course_icon_two">C1</div>
               <div class="course_content_two">
-                <h4>Common English</h4>
+                <h4>Spanish</h4>
 
-                <h5>Phrasal verbs</h5>
+                <h5>Advanced</h5>
               </div>
               <div class="progress">
                 <div
